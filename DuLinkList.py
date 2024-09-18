@@ -8,7 +8,7 @@ class DuLinkList:
     def __init__(self):
         self._head = DuLNode(None)
     
-    def ListLenth_DuL(self):
+    def list_lenth_DuL(self):
         p = self._head
         i = 0
         while p.next is not None:
@@ -16,8 +16,8 @@ class DuLinkList:
             i += 1
         return i
     
-    def ListInsert_DuL(self, i, e):
-        if i > ListLenth_DuL():
+    def list_insert_DuL(self, i, e):
+        if i > list_lenth_DuL():
             print('Error!')
             return 0
         p = self._head
@@ -30,8 +30,8 @@ class DuLinkList:
         p.prior = s
         '''不要忘记，我们实际上需要四条连线'''
 
-    def ListDelete_DuL(self, i):
-        if i > ListLenth_DuL():
+    def list_delete_DuL(self, i):
+        if i > list_lenth_DuL():
             print('Error!')
             return 0
         p = self._head

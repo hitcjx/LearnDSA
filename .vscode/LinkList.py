@@ -10,16 +10,16 @@ class LinkList:
     def __init__(self):
         self._head = Node(None)
 
-    def IsEmpty(self):
+    def empty(self):
         return self._head.next is None
 
-    def DestroyList(self):
-        while IsEmpty() == False:
+    def destroy_list(self):
+        while empty() == False:
             p = self._head
             self._head = self._head.next
             del p
 
-    def ClearList(self):
+    def clear_list(self):
         p = self._head.next
         self._head.next = None
         while p is not None:
@@ -27,7 +27,7 @@ class LinkList:
             del p
             p = q
 
-    def ListLenth(self):
+    def list_lenth(self):
         p = self._head
         i = 0
         while p.next is not None:
@@ -35,9 +35,9 @@ class LinkList:
             p = p.next
         return i
 
-    def GetElem (self, i):
+    def get_elem (self, i):
         p = self._head
-        if i > ListLenth():
+        if i > list_lenth():
             print('Error!')
             r = 0
         else:
@@ -46,7 +46,7 @@ class LinkList:
             r = p.item
         return r
 
-    def LocateElem(self, e):
+    def locate_elem(self, e):
         p = self._head.next
         i = 1
         while p is not None and p.item != e:
@@ -57,8 +57,8 @@ class LinkList:
         else:
             return i
     
-    def ListInsert(self, i, e):
-        if i > ListLenth():
+    def list_insert(self, i, e):
+        if i > list_lenth():
             print('Error!')
             return 0
         p = self._head
@@ -68,8 +68,8 @@ class LinkList:
         s.next = p.next
         p.next = s
 
-    def ListDelete(self, i):
-        if i > ListLenth():
+    def list_delete(self, i):
+        if i > list_lenth():
             print('Error!')
             return 0
         p = self._head
@@ -79,14 +79,14 @@ class LinkList:
         p.next = q.next
         del q
 
-    def CreatList_H(self, len):
+    def creat_list_H(self, len):
         for i in range(len):
             item = input()
             h = Node(item)
             h.next = self._head.next
             self._head.next = h
         
-    def CreatList_R(self, len):
+    def creat_list_R(self, len):
         r = self._head
         for i in range(len):
             item = input()
